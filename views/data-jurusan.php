@@ -1,7 +1,6 @@
 <?php
 include "./model/Jurusan.php";
 $jurusan = new jurusan();
-error_reporting(E_ALL);
 ?>
 <div class="row" id="table-striped">
     <div class="col-12">

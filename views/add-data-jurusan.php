@@ -13,6 +13,8 @@
                 <input type="text" required name="jurusan" class="form-control" placeholder="Masukkan Nama Jurusan" id="">
             </div>
             <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+            <button type="reset" class="btn btn-warning">Reset</button>
+            <a href="index.php?page=data-jurusan" class="btn btn-danger">Kembali</a>
         </form>
     </div>
 </div>
