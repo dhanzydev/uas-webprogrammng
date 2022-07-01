@@ -41,21 +41,21 @@ class dosen extends database
 
     function editData($id)
     {
-        $qry = mysqli_query($this->conn, "select * from jurusan where id_jurusan = '$id'");
+        $qry = mysqli_query($this->conn, "select * from dosen where nidn = '$id'");
         $data = mysqli_fetch_assoc($qry);
         return $data;
     }
 
     function updateData($data)
     {
-        $qry = mysqli_query($this->conn, "update jurusan set jurusan = '" . $data['jurusan'] . "' where id_jurusan = '" . $data['id_jurusan'] . "'") or die(mysqli_error($this->conn));
+        $qry = mysqli_query($this->conn, "update dosen set nama = '" . $data['nama'] . "', pendidikan = '" . $data['pendidikan'] . "', tgl_lahir = '" . $data['tgl_lahir'] . "', gender = '" . $data['jenis_kelamin'] . "', nama = '" . $data['nama'] . "', alamat = '" . $data['alamat'] . "', no_hp = '" . $data['no_hp'] . "', email = '" . $data['email'] . "' where nidn = '" . $data['nidn'] . "'") or die(mysqli_error($this->conn));
         echo $qry;
         return $qry;
     }
 
     function deleteData($id)
     {
-        $qry = mysqli_query($this->conn, "delete from jurusan where id_jurusan = '$id'") or die(mysqli_error($this->conn));
+        $qry = mysqli_query($this->conn, "delete from dosen where nidn = '$id'") or die(mysqli_error($this->conn));
         return $qry;
     }
 }

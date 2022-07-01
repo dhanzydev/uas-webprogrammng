@@ -6,7 +6,6 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $data = $jurusan->editData($id);
 }
-error_reporting(E_ALL);
 ?>
 
 <div class="card">

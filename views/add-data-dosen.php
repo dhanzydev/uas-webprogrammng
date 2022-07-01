@@ -6,11 +6,11 @@
         <form action="index.php?page=store-dosen" method="post">
             <div class="form-group mb-3">
                 <label for="">NIDN</label>
-                <input type="text" required name="nidn" class="form-control" placeholder="Masukkan ID Jurusan" id="">
+                <input type="text" required name="nidn" class="form-control" placeholder="Masukkan NIDN" id="">
             </div>
             <div class="form-group mb-3">
                 <label for="">Nama Dosen</label>
-                <input type="text" required name="nama_dosen" class="form-control" placeholder="Masukkan Nama Jurusan" id="">
+                <input type="text" required name="nama_dosen" class="form-control" placeholder="Masukkan Nama Dosen" id="">
             </div>
             <div class="form-group mb-3">
                 <label for="">Pendidikan Dosen</label>

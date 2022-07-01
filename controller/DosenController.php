@@ -2,6 +2,7 @@
 
 include "./model/Dosen.php";
 $dosen = new dosen();
+error_reporting(E_ALL);
 
 if ($_GET['page'] == "store-dosen") {
     if (isset($_POST['submit'])) {
@@ -42,8 +43,14 @@ if ($_GET['page'] == "store-dosen") {
 } else if ($_GET['page'] == "update-dosen" && $_GET['id']) {
     if (isset($_POST['submit'])) {
         $data = array(
-            'id_dosen' => $_GET['id'],
-            'dosen' => $_POST['dosen'],
+            'nidn' => $_GET['id'],
+            'nama' => $_POST['nama'],
+            'pendidikan' => $_POST['pendidikan'],
+            'tgl_lahir' => $_POST['tgl_lahir'],
+            'jenis_kelamin' => $_POST['jenis_kelamin'],
+            'alamat' => $_POST['alamat'],
+            'no_hp' => $_POST['no_hp'],
+            'email' => $_POST['email'],
         );
         $exec = $dosen->updateData($data);
         if ($exec) {

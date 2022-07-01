@@ -5,6 +5,8 @@ switch ($page) {
 	case 'home':
 		include 'views/home.php';
 		break;
+
+		// Jurusan
 	case 'data-jurusan':
 		include 'views/data-jurusan.php';
 		break;
@@ -23,6 +25,8 @@ switch ($page) {
 	case 'delete-data-jurusan':
 		include 'controller/JurusanController.php';
 		break;
+
+		// Dosen
 	case 'data-dosen':
 		include 'views/data-dosen.php';
 		break;
@@ -32,12 +36,22 @@ switch ($page) {
 	case 'store-dosen':
 		include 'controller/DosenController.php';
 		break;
+	case 'edit-data-dosen':
+		include 'views/edit-data-dosen.php';
+		break;
+	case 'update-dosen':
+		include 'controller/DosenController.php';
+		break;
+	case 'delete-data-dosen':
+		include 'controller/DosenController.php';
+		break;
 	case 'search-dosen':
 		include 'controller/DosenController.php';
 		break;
 	case 'display-data-dosen':
 		include 'views/display-data-dosen.php';
 		break;
+
 	default:
 		include 'views/home.php';
 		break;
