@@ -2,7 +2,6 @@
 
 include "./model/Dosen.php";
 $dosen = new dosen();
-error_reporting(E_ALL);
 
 if ($_GET['page'] == "store-dosen") {
     if (isset($_POST['submit'])) {

@@ -52,6 +52,32 @@ switch ($page) {
 		include 'views/display-data-dosen.php';
 		break;
 
+		// Mahasiswa
+	case 'data-mahasiswa':
+		include 'views/data-mahasiswa.php';
+		break;
+	case 'add-data-mahasiswa':
+		include 'views/add-data-mahasiswa.php';
+		break;
+	case 'store-mahasiswa':
+		include 'controller/MahasiswaController.php';
+		break;
+	case 'edit-data-mahasiswa':
+		include 'views/edit-data-mahasiswa.php';
+		break;
+	case 'update-mahasiswa':
+		include 'controller/MahasiswaController.php';
+		break;
+	case 'delete-data-mahasiswa':
+		include 'controller/MahasiswaController.php';
+		break;
+	case 'search-mahasiswa':
+		include 'controller/MahasiswaController.php';
+		break;
+	case 'display-data-mahasiswa':
+		include 'views/display-data-mahasiswa.php';
+		break;
+
 	default:
 		include 'views/home.php';
 		break;

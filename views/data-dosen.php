@@ -1,7 +1,6 @@
 <?php
 include "./model/Dosen.php";
 $dosen = new dosen();
-error_reporting(E_ALL);
 ?>
 <div class="row" id="table-striped">
     <div class="col-12">
