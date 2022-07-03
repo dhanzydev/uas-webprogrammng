@@ -5,6 +5,13 @@ switch ($page) {
 	case 'home':
 		include 'views/home.php';
 		break;
+	case 'login':
+		include 'login.php';
+		break;
+	case 'login-proses':
+		include 'controller/LoginController.php';
+		break;
+
 
 		// Jurusan
 	case 'data-jurusan':

@@ -1,4 +1,6 @@
-<?php error_reporting(0); ?>
+<?php error_reporting(0);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,56 +50,11 @@
             </div>
           </div>
         </div>
-        <div class="sidebar-menu">
-          <ul class="menu">
-            <li class="sidebar-title">Menu</li>
-
-            <li class="sidebar-item">
-              <a href="index.php?page=home" class="sidebar-link">
-                <i class="bi bi-house-door-fill"></i>
-                <span>Dashboard</span>
-              </a>
-            </li>
-
-            <li class="sidebar-title">Data</li>
-
-            <li class="sidebar-item  has-sub">
-              <a href="#" class='sidebar-link'>
-                <i class="bi bi-collection-fill"></i>
-                <span>Master Data</span>
-              </a>
-              <ul class="submenu ">
-                <li class="submenu-item ">
-                  <a href="index.php?page=data-jurusan">Data Jurusan</a>
-                </li>
-                <li class="submenu-item ">
-                  <a href="index.php?page=data-mahasiswa">Data Mahasiswa</a>
-                </li>
-                <li class="submenu-item ">
-                  <a href="index.php?page=data-dosen">Data Dosen</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+        <?php include 'page.php' ?>
       </div>
-    </div>
-    <div id="main">
-      <header class="mb-3">
-        <a href="#" class="burger-btn d-block d-xl-none">
-          <i class="bi bi-justify fs-3"></i>
-        </a>
-      </header>
-      <div class="page-content">
-        <section class="row">
-          <?php include 'page.php' ?>
-        </section>
-      </div>
-    </div>
-  </div>
-  <script src="assets/js/app.js"></script>
+      <script src="assets/js/app.js"></script>
 
-  <script src="assets/js/pages/dashboard.js"></script>
+      <script src="assets/js/pages/dashboard.js"></script>
 </body>
 
 </html>

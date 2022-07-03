@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+include "./connection.php";
 
 class login extends database
 {
@@ -21,15 +21,15 @@ class login extends database
 
 $xlogin = new login();
 
-$username = $this->conn->mysqli_real_escape_string($_POST['username']);
-$password = $this->conn->mysqli_real_escape_string($_POST['password']);
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 $data = $xlogin->login_proses($username, $password);
 
-if ($data) {
-    session_start();
-    $_SESSION['user'] = $data['nama'];
-    echo "<script>alert('Login Berhail');window.location = 'index.php'</script>";
-} else {
-    echo "Login gagal, user tidak ditemukan";
+
+if ($_GET['page'] == "login-proses") {
+    if ($data == true && $data['level'] == "Admin") {
+        session_start();
+        echo "<script>window.location = 'index.php?page=home'</script>";
+    }
 }
