@@ -87,6 +87,27 @@ switch ($page) {
 		include 'views/display-data-mahasiswa.php';
 		break;
 
+		// Pengumuman
+	case 'pengumuman':
+		include 'views/pengumuman.php';
+		break;
+	case 'add-pengumuman':
+		include 'views/add-pengumuman.php';
+		break;
+	case 'store-pengumuman':
+		include 'controller/PengumumanController.php';
+		break;
+	case 'edit-pengumuman':
+		include 'views/edit-pengumuman.php';
+		break;
+	case 'update-pengumuman':
+		include 'controller/PengumumanController.php';
+		break;
+	case 'delete-pengumuman':
+		include 'controller/PengumumanController.php';
+		break;
+
+
 		// End Page Admin
 
 		// Page Mahasiswa

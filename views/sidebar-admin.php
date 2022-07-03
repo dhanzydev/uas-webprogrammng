@@ -28,6 +28,13 @@
                 </li>
             </ul>
         </li>
+
+        <li class="sidebar-item">
+            <a href="index.php?page=pengumuman" class="sidebar-link">
+                <i class="bi bi-volume-up-fill"></i>
+                <span>Pengumuman</span>
+            </a>
+        </li>
     </ul>
 </div>
 </div>
