@@ -2,14 +2,16 @@
 
 $page = $_GET['page'];
 switch ($page) {
-	case 'home':
-		include 'views/home.php';
-		break;
 	case 'login':
 		include 'login.php';
 		break;
 	case 'login-proses':
 		include 'controller/LoginController.php';
+		break;
+
+		// Page Admin
+	case 'home':
+		include 'views/home.php';
 		break;
 
 
@@ -83,6 +85,13 @@ switch ($page) {
 		break;
 	case 'display-data-mahasiswa':
 		include 'views/display-data-mahasiswa.php';
+		break;
+
+		// End Page Admin
+
+		// Page Mahasiswa
+	case 'home-mhs':
+		include 'views/home-mhs.php';
 		break;
 
 	default:

@@ -1,6 +1,7 @@
 <?php
 include './model/Mahasiswa.php';
 $mahasiswa = new mahasiswa();
+include 'sidebar-admin.php';
 ?>
 
 <div id="main">

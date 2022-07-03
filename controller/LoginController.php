@@ -29,7 +29,12 @@ $data = $xlogin->login_proses($username, $password);
 
 if ($_GET['page'] == "login-proses") {
     if ($data == true && $data['level'] == "Admin") {
+        $_SESSION['user'] = $data['username'];
         session_start();
-        echo "<script>window.location = 'index.php?page=home'</script>";
+        print_r($_SESSION);
+        echo "<script>alert('Login Berhasil');window.location = 'index.php?page=home'</script>";
+    } else if ($data == true && $data['level'] == "Mahasiswa") {
+        $_SESSION['user'] = $data['username'];
+        echo "<script>alert('Login Berhasil');window.location = 'index.php?page=home-mhs'</script>";
     }
 }
