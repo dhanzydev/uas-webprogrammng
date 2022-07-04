@@ -17,6 +17,9 @@
                 <li class="submenu-item ">
                     <a href="index.php?page=add-form-akademik-cuti">Cuti</a>
                 </li>
+                <li class="submenu-item">
+                    <a href="index.php?page=add-form-cuti-dispensasi">Cuti dan Dispensi</a>
+                </li>
             </ul>
         </li>
     </ul>

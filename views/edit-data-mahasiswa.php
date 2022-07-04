@@ -95,7 +95,7 @@ include 'sidebar-admin.php'
                         <img src="<?php echo $data['foto'] ?>" class="img-fluid w-25 h-25 mb-5" alt="">
                         <div class="form-group mb-3">
                             <label for="">Foto Mahasiswa</label>
-                            <input type="file" required name="foto" class="form-control" placeholder="Masukkan Foto Mahasiswa" id="">
+                            <input type="file" name="foto" class="form-control" placeholder="Masukkan Foto Mahasiswa" id="">
                         </div>
                         <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                         <button type="reset" class="btn btn-warning">Reset</button>

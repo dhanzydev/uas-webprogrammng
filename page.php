@@ -133,6 +133,13 @@ switch ($page) {
 	case 'store-form-akademik-cuti':
 		include 'controller/FormAkademikCutiController.php';
 		break;
+	case 'add-form-cuti-dispensasi':
+		include 'views/add-data-form-cuti-dispensasi.php';
+		break;
+	case 'store-form-cuti-dispensasi':
+		include 'controller/FormCutiDispensasiController.php';
+		break;
+
 
 	default:
 		include 'views/home.php';

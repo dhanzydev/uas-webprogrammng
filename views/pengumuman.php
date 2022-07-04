@@ -1,4 +1,6 @@
 <?php
+include "./model/Pengumuman.php";
+$pengumuman = new pengumuman();
 
 include 'sidebar-admin.php';
 ?>
@@ -24,16 +26,25 @@ include 'sidebar-admin.php';
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Pengumuman</th>
+                                        <th>Judul Pengumuman</th>
+                                        <th>Isi Pengumuman</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    <?php
+                                    foreach ($pengumuman->displayData() as $data) {
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $data['id'] ?></td>
+                                            <td><?php echo $data['judul_pengumuman'] ?></td>
+                                            <td><?php echo $data['isi_pengumuman'] ?></td>
+                                            <td>
+                                                <a href="index.php?page=edit-pengumuman&id=<?php echo $data['id'] ?>" class="btn btn-warning">Edit</a>
+                                                <a href="index.php?page=delete-pengumuman&id=<?php echo $data['id'] ?>" onclick="return confirm('Apakah anda ingin menghapus data ?')" class="btn btn-danger">Hapus</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>

@@ -6,10 +6,6 @@ class dosen extends database
     function __construct()
     {
         parent::__construct();
-        session_start();
-        if ($_SESSION['user'] == "") {
-            echo "<script>alert('Anda belum login, silahkan login terlebih dahulu');window.location = 'login.php'</script>";
-        }
     }
 
     function searchingData($search)

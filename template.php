@@ -55,6 +55,16 @@
       <script src="assets/js/app.js"></script>
 
       <script src="assets/js/pages/dashboard.js"></script>
+      <script>
+        var dispensasi = document.getElementById("dispensasi");
+        var dispensasiReason = document.getElementById('dispensasi-reason');
+        if (dispensasi.checked = false) {
+          dispensasi.checked = true;
+        } else {
+          document.getElementById("dispensasi").checked = true;
+        }
+        console.log(dispensasi);
+      </script>
 </body>
 
 </html>

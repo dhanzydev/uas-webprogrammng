@@ -1,6 +1,10 @@
 <?php
+include './model/Pengumuman.php';
+$pengumuman = new pengumuman();
+
 include 'sidebar-admin.php';
 ?>
+
 
 <div id="main">
     <header class="mb-3">
@@ -26,7 +30,7 @@ include 'sidebar-admin.php';
                         </div>
                         <div class="form-group mb-3">
                             <label for="">File Pengumuman</label>
-                            <input type="file" name="file" class="form-control" id="">
+                            <input type="file" name="file_pengumuman" class="form-control" id="">
                         </div>
                         <input type="submit" name="submit" class="btn btn-primary" value="Submit">
                         <button type="reset" class="btn btn-warning">Reset</button>

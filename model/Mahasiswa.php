@@ -67,9 +67,13 @@ class mahasiswa extends database
 
     function updateData($data)
     {
-        $qry = mysqli_query($this->conn, "update mahasiswa set kode_jurusan = '" . $data['jurusan'] . "', nidn_dosen = '" . $data['dosen_wali'] . "', nama_mhs = '" . $data['nama_mhs'] . "', jenis_kelamin_mhs = '" . $data['jenis_kelamin'] . "', no_hp_mhs = '" . $data['no_hp'] . "', alamat_mhs = '" . $data['alamat'] . "', tgl_lahir_mhs = '" . $data['tgl_lahir'] . "', email_mhs = '" . $data['email'] . "', foto = '" . $data['foto'] . "' where nim = '" . $data['nim'] . "'") or die(mysqli_error($this->conn));
-        echo $qry;
-        return $qry;
+        if ($data['foto'] != "") {
+            $qry = mysqli_query($this->conn, "update mahasiswa set kode_jurusan = '" . $data['jurusan'] . "', nidn_dosen = '" . $data['dosen_wali'] . "', nama_mhs = '" . $data['nama_mhs'] . "', jenis_kelamin_mhs = '" . $data['jenis_kelamin'] . "', no_hp_mhs = '" . $data['no_hp'] . "', alamat_mhs = '" . $data['alamat'] . "', tgl_lahir_mhs = '" . $data['tgl_lahir'] . "', email_mhs = '" . $data['email'] . "', foto = '" . $data['foto'] . "' where nim = '" . $data['nim'] . "'") or die(mysqli_error($this->conn));
+            return $qry;
+        } else {
+            $qry = mysqli_query($this->conn, "update mahasiswa set kode_jurusan = '" . $data['jurusan'] . "', nidn_dosen = '" . $data['dosen_wali'] . "', nama_mhs = '" . $data['nama_mhs'] . "', jenis_kelamin_mhs = '" . $data['jenis_kelamin'] . "', no_hp_mhs = '" . $data['no_hp'] . "', alamat_mhs = '" . $data['alamat'] . "', tgl_lahir_mhs = '" . $data['tgl_lahir'] . "', email_mhs = '" . $data['email'] . "' where nim = '" . $data['nim'] . "'") or die(mysqli_error($this->conn));
+            return $qry;
+        }
     }
 
     function deleteData($id)
