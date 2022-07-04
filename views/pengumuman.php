@@ -1,6 +1,4 @@
 <?php
-include "./model/Jurusan.php";
-$pengumuman = new jurusan();
 
 include 'sidebar-admin.php';
 ?>
@@ -31,18 +29,11 @@ include 'sidebar-admin.php';
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    foreach ($jurusan->displayData() as $data) {
-                                    ?>
-                                        <tr>
-                                            <td><?php echo $data['id_jurusan'] ?></td>
-                                            <td><?php echo $data['jurusan'] ?></td>
-                                            <td>
-                                                <a href="index.php?page=edit-pengumuman&id=<?php echo $data['id_jurusan'] ?>" class="btn btn-warning">Edit</a>
-                                                <a href="index.php?page=delete-pengumuman&id=<?php echo $data['id_jurusan'] ?>" onclick="return confirm('Apakah anda ingin menghapus data ?')" class="btn btn-danger">Hapus</a>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

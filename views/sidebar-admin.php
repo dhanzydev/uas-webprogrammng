@@ -9,8 +9,6 @@
             </a>
         </li>
 
-        <li class="sidebar-title">Data</li>
-
         <li class="sidebar-item  has-sub">
             <a href="#" class='sidebar-link'>
                 <i class="bi bi-collection-fill"></i>
@@ -34,6 +32,18 @@
                 <i class="bi bi-volume-up-fill"></i>
                 <span>Pengumuman</span>
             </a>
+        </li>
+
+        <li class="sidebar-item  has-sub">
+            <a href="#" class='sidebar-link'>
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Form Akademik</span>
+            </a>
+            <ul class="submenu ">
+                <li class="submenu-item ">
+                    <a href="index.php?page=data-form-cuti">Cuti</a>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>

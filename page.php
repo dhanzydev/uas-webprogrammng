@@ -107,12 +107,31 @@ switch ($page) {
 		include 'controller/PengumumanController.php';
 		break;
 
+		// Form Akademik
+	case 'data-form-cuti':
+		include 'views/data-form-akademik-cuti.php';
+		break;
+	case 'print-form-cuti':
+		include 'views/print-form-akademik-cuti.php';
+		break;
+	case 'form-cuti-setuju':
+		include 'controller/FormAkademikCutiController.php';
+		break;
+	case 'print-izin-cuti':
+		include 'views/print-izin-cuti.php';
+		break;
 
 		// End Page Admin
 
 		// Page Mahasiswa
 	case 'home-mhs':
 		include 'views/home-mhs.php';
+		break;
+	case 'add-form-akademik-cuti':
+		include 'views/add-data-form-akademik-cuti.php';
+		break;
+	case 'store-form-akademik-cuti':
+		include 'controller/FormAkademikCutiController.php';
 		break;
 
 	default:
