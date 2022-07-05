@@ -18,9 +18,15 @@
                     <a href="index.php?page=add-form-akademik-cuti">Cuti</a>
                 </li>
                 <li class="submenu-item">
-                    <a href="index.php?page=add-form-cuti-dispensasi">Cuti dan Dispensi</a>
+                    <a href="index.php?page=add-form-sakit-dispensasi">Sakit dan Dispensi</a>
                 </li>
             </ul>
+        </li>
+        <li class="sidebar-item">
+            <a href="logout.php" class="sidebar-link">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>Logout</span>
+            </a>
         </li>
     </ul>
 </div>

@@ -108,6 +108,8 @@ switch ($page) {
 		break;
 
 		// Form Akademik
+
+		// Cuti
 	case 'data-form-cuti':
 		include 'views/data-form-akademik-cuti.php';
 		break;
@@ -121,6 +123,18 @@ switch ($page) {
 		include 'views/print-izin-cuti.php';
 		break;
 
+		// Sakit dan Dispensasi
+	case 'data-form-sakit-dispensasi':
+		include 'views/data-form-akademik-sakit-dispensasi.php';
+		break;
+	case 'print-form-sakit-dispensasi':
+		include 'views/print-form-akademik-sakit-dispensasi.php';
+		break;
+
+		// Pemutihan Cuti
+
+
+
 		// End Page Admin
 
 		// Page Mahasiswa
@@ -133,11 +147,17 @@ switch ($page) {
 	case 'store-form-akademik-cuti':
 		include 'controller/FormAkademikCutiController.php';
 		break;
-	case 'add-form-cuti-dispensasi':
-		include 'views/add-data-form-cuti-dispensasi.php';
+	case 'add-form-sakit-dispensasi':
+		include 'views/add-data-form-sakit-dispensasi.php';
 		break;
-	case 'store-form-cuti-dispensasi':
-		include 'controller/FormCutiDispensasiController.php';
+	case 'store-form-sakit-dispensasi':
+		include 'controller/FormSakitDispensasiController.php';
+		break;
+	case 'add-form-pemutihan-cuti':
+		include 'views/add-data-form-pemutihan-cuti.php';
+		break;
+	case 'store-form-pemutihan-cuti':
+		include 'controller/FormPemutihanCutiController.php';
 		break;
 
 

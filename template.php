@@ -53,17 +53,29 @@
         <?php include 'page.php' ?>
       </div>
       <script src="assets/js/app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
       <script src="assets/js/pages/dashboard.js"></script>
       <script>
         var dispensasi = document.getElementById("dispensasi");
         var dispensasiReason = document.getElementById('dispensasi-reason');
-        if (dispensasi.checked = false) {
-          dispensasi.checked = true;
-        } else {
-          document.getElementById("dispensasi").checked = true;
+
+        function showReasonDispensasi() {
+          dispensasiReason.style.display = dispensasi.checked ? "block" : "none";
         }
-        console.log(dispensasi);
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $(".add-more").click(function() {
+            var html = $(".copy").html();
+            $(".after-add-more").after(html);
+          });
+
+          // saat tombol remove dklik control group akan dihapus 
+          $("body").on("click", ".remove", function() {
+            $(this).parents(".control-group").remove();
+          });
+        });
       </script>
 </body>
 

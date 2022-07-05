@@ -1,23 +1,31 @@
 <?php
 
-include "./model/FormCuti.php";
-$formAkademikCuti = new formcuti();
+include "./model/FormSakitDispensasi.php";
+$FormSakitDispensasi = new formsakitdispensasi();
+error_reporting(E_ALL);
 
 
-if ($_GET['page'] == "store-form-akademik-cuti") {
+if ($_GET['page'] == "store-form-sakit-dispensasi") {
     if (isset($_POST['submit'])) {
+
+
         $data = array(
             'nama' => $_POST['nama'],
-            'nim' => $_POST['nim'],
-            'fakultas' => $_POST['fakultas'],
             'program_studi' => $_POST['program_studi'],
+            'alamat' => $_POST['alamat'],
             'no_hp' => $_POST['no_hp'],
-            'tahun_akademik' => $_POST['tahun_akademik'],
+            'nama_matakuliah' => $_POST['nama_matakuliah'],
+            'kelas' => $_POST['kelas'],
+            'tanggal' => $_POST['tanggal'],
+            'pertemuan' => $_POST['pertemuan'],
+            'alasan' => $_POST['alasan'],
         );
 
-        $exec = $formAkademikCuti->storeData($data);
+        $total = count($_POST['nama_matakuliah']);
+
+        $exec = $FormSakitDispensasi->storeData($data, $total);
         if ($exec) {
-            echo "<script>alert('Data Berhasil Terkirim ke Akademik, Silahkan Tunggu Konfirmasi dari Kami melalui No HP anda');window.location = 'index.php?page=add-form-akademik-cuti'</script>";
+            echo "<script>alert('Data Berhasil Terkirim ke Akademik');window.location = 'index.php?page=add-form-sakit-dispensasi'</script>";
         } else {
             echo "Gagal insert!";
         }

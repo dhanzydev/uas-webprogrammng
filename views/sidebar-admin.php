@@ -43,7 +43,17 @@
                 <li class="submenu-item ">
                     <a href="index.php?page=data-form-cuti">Cuti</a>
                 </li>
+                <li class="submenu-item ">
+                    <a href="index.php?page=data-form-sakit-dispensasi">Dispensasi dan Sakit</a>
+                </li>
             </ul>
+        </li>
+
+        <li class="sidebar-item">
+            <a href="logout.php" class="sidebar-link">
+                <i class="bi bi-box-arrow-in-right"></i>
+                <span>Logout</span>
+            </a>
         </li>
     </ul>
 </div>
