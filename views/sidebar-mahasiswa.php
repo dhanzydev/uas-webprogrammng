@@ -17,8 +17,14 @@
                 <li class="submenu-item ">
                     <a href="index.php?page=add-form-akademik-cuti">Cuti</a>
                 </li>
+                <li class="submenu-item ">
+                    <a href="index.php?page=add-form-pemutihan-cuti">Pemutihan Cuti</a>
+                </li>
                 <li class="submenu-item">
                     <a href="index.php?page=add-form-sakit-dispensasi">Sakit dan Dispensi</a>
+                </li>
+                <li class="submenu-item">
+                    <a href="index.php?page=add-form-aktif-kuliah">Keterangan Aktif Kuliah</a>
                 </li>
             </ul>
         </li>

@@ -44,7 +44,16 @@
                     <a href="index.php?page=data-form-cuti">Cuti</a>
                 </li>
                 <li class="submenu-item ">
+                    <a href="index.php?page=data-form-pemutihan-cuti">Pemutihan Cuti</a>
+                </li>
+                <li class="submenu-item ">
                     <a href="index.php?page=data-form-sakit-dispensasi">Dispensasi dan Sakit</a>
+                </li>
+                <li class="submenu-item ">
+                    <a href="index.php?page=data-form-sakit-dispensasi">Dispensasi dan Sakit</a>
+                </li>
+                <li class="submenu-item">
+                    <a href="index.php?page=data-form-keterangan-aktif-kuliah">Keterangan Aktif Kuliah</a>
                 </li>
             </ul>
         </li>

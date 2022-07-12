@@ -1,5 +1,8 @@
 <?php error_reporting(0);
-
+session_start();
+if ($_SESSION['user'] == "") {
+  echo "<script>alert('Anda belum login, silahkan login terlebih dahulu');window.location = 'login.php'</script>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

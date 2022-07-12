@@ -132,6 +132,20 @@ switch ($page) {
 		break;
 
 		// Pemutihan Cuti
+	case 'data-form-pemutihan-cuti':
+		include 'views/data-form-akademik-pemutihan-cuti.php';
+		break;
+	case 'print-form-pemutihan-cuti':
+		include 'views/print-form-akademik-pemutihan-cuti.php';
+		break;
+
+		// Keterangan Aktif Kuliah
+	case 'data-form-keterangan-aktif-kuliah':
+		include 'views/data-form-akademik-keterangan-aktif-kuliah.php';
+		break;
+	case 'print-form-keterangan-aktif-kuliah':
+		include 'views/print-form-akademik-keterangan-aktif-kuliah.php';
+		break;
 
 
 
@@ -158,6 +172,22 @@ switch ($page) {
 		break;
 	case 'store-form-pemutihan-cuti':
 		include 'controller/FormPemutihanCutiController.php';
+		break;
+
+
+		// Aktif Kuliah
+	case 'add-form-aktif-kuliah':
+		include 'views/add-data-form-aktif-kuliah.php';
+		break;
+	case 'store-form-aktif-kuliah':
+		include 'controller/FormAktifKuliahController.php';
+		break;
+
+	case 'data-form-aktif-kuliah':
+		include 'views/data-form-aktif-kuliah.php';
+		break;
+	case 'print-form-aktif-kuliah':
+		include 'views/print-form-aktif-kuliah.php';
 		break;
 
 

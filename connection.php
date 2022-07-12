@@ -4,7 +4,7 @@ class database{
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "bc203_db";
+    private $database = "bc203_db_2";
 
     protected $conn;
 
@@ -22,4 +22,3 @@ class database{
     }
     
 }
-?>

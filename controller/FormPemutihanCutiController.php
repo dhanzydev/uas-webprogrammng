@@ -1,31 +1,22 @@
 <?php
 
-include "./model/FormSakitDispensasi.php";
-$FormSakitDispensasi = new formsakitdispensasi();
-error_reporting(0);
+include "./model/FormPemutihanCuti.php";
+$formPemutihanCuti = new formpemutihancuti();
 
-
-if ($_GET['page'] == "store-form-sakit-dispensasi") {
+if ($_GET['page'] == "store-form-pemutihan-cuti") {
     if (isset($_POST['submit'])) {
-
-
         $data = array(
             'nama' => $_POST['nama'],
+            'nim' => $_POST['nim'],
+            'fakultas' => $_POST['fakultas'],
             'program_studi' => $_POST['program_studi'],
-            'alamat' => $_POST['alamat'],
             'no_hp' => $_POST['no_hp'],
-            'nama_matakuliah' => $_POST['nama_matakuliah'],
-            'kelas' => $_POST['kelas'],
-            'tanggal' => $_POST['tanggal'],
-            'pertemuan' => $_POST['pertemuan'],
-            'alasan' => $_POST['alasan'],
+            'tahun_akademik' => $_POST['tahun_akademik'],
         );
 
-        $total = count($_POST['nama_matakuliah']);
-
-        $exec = $FormSakitDispensasi->storeData($data, $total);
+        $exec = $formPemutihanCuti->storeData($data);
         if ($exec) {
-            echo "<script>alert('Data Berhasil Terkirim ke Akademik');window.location = 'index.php?page=add-form-sakit-dispensasi'</script>";
+            echo "<script>alert('Data Berhasil Terkirim ke Akademik, Silahkan Tunggu Konfirmasi dari Kami melalui No HP anda');window.location = 'index.php?page=add-form-pemutihan-cuti'</script>";
         } else {
             echo "Gagal insert!";
         }
@@ -54,4 +45,8 @@ if ($_GET['page'] == "store-form-sakit-dispensasi") {
             echo "Gagal insert!";
         }
     }
+} else {
+    $id = $_GET['id'];
+    $jurusan->deleteData($id);
+    echo "<script>alert('Data Berhasil Dihapus');window.location = 'index.php?page=data-jurusan'</script>";
 }

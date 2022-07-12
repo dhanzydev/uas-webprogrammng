@@ -35,6 +35,6 @@ if ($_GET['page'] == "login-proses") {
     } else if ($data == true && $data['level'] == "Mahasiswa") {
         $_SESSION['user'] = $data['username'];
         session_start();
-        echo "<script>alert('Login Berhasil');window.location = 'index.php?page=home-mhs'</script>";
+        header("location:index.php?page=home-mhs");
     }
 }
